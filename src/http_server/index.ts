@@ -1,10 +1,13 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as http from 'http';
+import dotenv from "dotenv";
+import {EventEmitter} from "node:events"; 
+
 
 export const httpServer = http.createServer(function (req, res) {
-    const __dirname = path.resolve(path.dirname(''));
-    const file_path = __dirname + (req.url === '/' ? '/front/index.html' : '/front' + req.url);
+    const __dirname: string = path.resolve(path.dirname(''));
+    const file_path: string = __dirname + (req.url === '/' ? '/front/index.html' : '/front' + req.url);
     fs.readFile(file_path, function (err, data) {
         if (err) {
             res.writeHead(404);
@@ -15,3 +18,6 @@ export const httpServer = http.createServer(function (req, res) {
         res.end(data);
     });
 });
+
+
+
