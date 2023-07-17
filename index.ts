@@ -1,7 +1,9 @@
 import { httpServer } from "./src/http_server/index";
+import "./src/web_sever/index";
+
 import dotenv from "dotenv";
 
-import "./src/web_sever/index";
+
 
 dotenv.config();
 const HTTP_PORT = parseInt(process.env.PORT!) || 5000;

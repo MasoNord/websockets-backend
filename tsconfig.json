@@ -8,5 +8,5 @@
       "resolveJsonModule": true,
       "esModuleInterop": true,
   }, 
-  "include": ["src/**/*", "index.ts"],
+  "include": ["src/**/*", "index.ts", "src/interface/room.interface.ts", "src/interface/users.interface.ts", "src/repository/room.repository.ts", "src/repository/users.repository.ts"],
 }

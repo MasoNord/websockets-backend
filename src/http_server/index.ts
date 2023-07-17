@@ -1,9 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import * as http from 'http';
-import dotenv from "dotenv";
-import {EventEmitter} from "node:events"; 
-
 
 export const httpServer = http.createServer(function (req, res) {
     const __dirname: string = path.resolve(path.dirname(''));
